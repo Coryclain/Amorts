@@ -1,0 +1,94 @@
+<Inventario>:
+    id: inventario_db
+    name: 'inventario_db'
+    Wid_Alfa:
+    Ala:
+
+<Wid_Alfa>
+    cols:1
+    canvas:
+        Color:
+            rgb: 1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    padding: 50, 15
+    spacing: 50, 15
+
+    Wid_Inventario:
+    Wid_Alfa2:
+
+
+<Wid_Inventario>:
+    cols: 1
+    canvas:
+        Color:
+            rgb: (0.93, 0.93, 0.93)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    padding: 30, 20
+    spacing: 50, 15
+    Label:
+        size_hint: 1,None
+        height: 50
+        text: "Inventarios"
+        color: 0,0,0,1
+        pos_hint: {'center_x':0.5,'center_y':0.950}
+
+
+    BoxLayout:
+        data: ''
+        data_id: ''
+        Button:
+            size_hint: 0.9, 0.5
+            size_font: self.width*0.4
+            #text: app.root.data
+            pos_hint: {'center_y':0.850}
+            on_release:
+        Button:
+            size_hint: 0.3, 0.5
+            text:'editar'
+            pos_hint: {'center_y':0.850}
+            on_press:
+
+
+
+
+
+
+    #Boton para agregar  productos
+    MDFillRoundFlatIconButton:
+        icon: "plus-circle"
+        text: "Agregar inventario"
+        on_release: self.create_new_inventario()
+
+<Wid_Alfa2>:
+    cols: 1
+    canvas:
+        Color:
+            rgb: 71/255.0, 249/255.0, 179/255.0
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    Button:
+        size_hint: 1,None
+        height: 50
+        text: "Listas de inventario"
+    Button:
+        size_hint: 1,None
+        height: 50
+        text: "2"
+    Button:
+        size_hint: 1,None
+        height: 50
+        text: "3"
+    Button:
+        size_hint: 1,None
+        height: 50
+        text: "4"
+
+
+<Ala>:
+    id: ala_tos
+    name: "ala_tos"

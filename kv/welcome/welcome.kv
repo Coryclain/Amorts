@@ -1,0 +1,36 @@
+#: include kv/welcome/wel_registro.kv
+#:include baseclass/welcome.py
+<Welcome>:
+    id: welcome
+    name: 'welcome'
+
+    FloatLayout:
+        MDToolbar:
+            id: toolbar   
+            elevation: 10
+            pos_hint: {'top': 1}
+
+        Image:
+            size_hint: None, None
+            size: "200dp", "200dp"    
+            source: "imagenes/logott.png"
+            pos_hint: {'center_x':0.5,'center_y':0.75}
+
+        MDLabel:
+            text:'¡Bienvenido!'
+            font_style: 'H5'
+            halign: 'center'
+            pos_hint: {'center_y':0.60}
+
+        MDLabel:
+            text:'Al Sistema de inventario doméstico que te permitirá registrar todos tus alimentos y/o productos, en donde podrás generar hábitos.'
+            halign: 'center'
+            pos_hint: {'center_x':0.5,'center_y':0.50}
+        
+        MDFillRoundFlatButton:
+            text: "¡Comencemos!"
+            text_color: 40, 20, 20, 100
+            pos_hint: {'center_x':0.5,'center_y':0.350}
+            on_release: app.root.current = 'wel_registro'; root.crear_database()
+
+
